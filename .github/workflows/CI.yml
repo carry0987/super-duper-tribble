@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '.github/**'
+      - '.prettierignore'
+      - 'pnpm-lock.yaml'
+      - '**.md'
+      - LICENSE
+  pull_request:
+    types: [opened, synchronize]
+    paths-ignore:
+      - '.prettierignore'
+      - 'pnpm-lock.yaml'
+      - '**.md'
+      - LICENSE
+
+jobs:
+  ci:
+    name: General
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm build
+  build:
+    name: Update build artifacts
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    needs: [ci]
+    if: ${{ github.event_name != 'pull_request' }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: 'build'
+          fetch: true
+          commit: --signoff
+          author_name: 'carry0987[bot]'
+          author_email: ${{ github.actor }}@users.noreply.github.com
+          default_author: user_info
+          message: '[skip ci] :sparkles: Update build artifacts'
+          pull: true
+          push: true

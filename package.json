@@ -1,0 +1,41 @@
+{
+    "name": "@carry0987/docker-manifest-action",
+    "description": "A tiny, simple GitHub Action to link Docker manifests easily",
+    "version": "1.0.0",
+    "main": "build/main.js",
+    "types": "build/index.d.ts",
+    "type": "module",
+    "private": true,
+    "author": "carry0987",
+    "license": "MIT",
+    "repository": "https://github.com/carry0987/docker-manifest-action",
+    "bugs": "https://github.com/carry0987/docker-manifest-action/issues/new",
+    "keywords": [
+        "docker",
+        "docker-manifest-action",
+        "manifest"
+    ],
+    "scripts": {
+        "lint": "prettier --write \"src/**/*.{ts,tsx,scss}\"",
+        "start": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+        "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --environment BUILD:production"
+    },
+    "dependencies": {
+        "@actions/core": "1.11.1",
+        "@actions/exec": "1.1.1",
+        "@carry0987/utils": "^3.8.5",
+        "@docker/actions-toolkit": "0.63.0"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^28.0.6",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^16.0.1",
+        "@rollup/plugin-terser": "^0.4.4",
+        "@rollup/plugin-typescript": "^12.1.4",
+        "@types/node": "^24.5.2",
+        "prettier": "^3.6.2",
+        "rollup": "^4.52.2",
+        "rollup-plugin-tsconfig-paths": "^1.5.2",
+        "tslib": "^2.8.1"
+    }
+}
