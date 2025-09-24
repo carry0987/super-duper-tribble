@@ -1,6 +1,6 @@
 ### 🐳 `docker-imagetools-action`
 
-#### *A tiny, simple GitHub Action to link Docker manifests easily*
+#### *A tiny, simple GitHub Action to link Docker manifests with imagetools easily*
 
 **docker-imagetools-action** is a simple GitHub action that combines a list of Docker manifests and merges them into one image via the [`docker buildx imagetools`] command.
 
