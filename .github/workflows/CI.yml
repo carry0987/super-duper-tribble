@@ -53,4 +53,3 @@ jobs:
           author_email: carry0987@users.noreply.github.com
           default_author: user_info
           message: '[skip ci] :sparkles: Update build artifacts'
-          # push: true
