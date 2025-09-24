@@ -1,5 +1,5 @@
 import { endGroup, info, setOutput, startGroup } from '@actions/core';
-import type { Inputs } from '@/inputs.js';
+import type { Inputs } from '@/inputs';
 import { exec } from '@actions/exec';
 
 const createManifestArguments = (

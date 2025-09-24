@@ -1,6 +1,6 @@
 import { endGroup, info, setOutput, startGroup, warning } from '@actions/core';
-import { Buildx } from '@docker/actions-toolkit/lib/buildx/buildx.js';
-import { Inputs } from '@/inputs.js';
+import { Buildx } from '@docker/actions-toolkit/lib/buildx/buildx';
+import { Inputs } from '@/inputs';
 import { exec } from '@actions/exec';
 
 const getArguments = (type: 'create' | 'inspect', inputs: Omit<Inputs, 'fallback'>) => {

@@ -1,9 +1,9 @@
 import { endGroup, error, startGroup, warning } from '@actions/core';
-import runImageTools from '@/tools/imagetools.js';
-import { all, get } from '@/inputs.js';
-import runFallback from '@/tools/manifest.js';
-import { Docker } from '@docker/actions-toolkit/lib/docker/docker.js';
-import { Buildx } from '@docker/actions-toolkit/lib/buildx/buildx.js';
+import runImageTools from '@/tools/imagetools';
+import { all, get } from '@/inputs';
+import runFallback from '@/tools/manifest';
+import { Docker } from '@docker/actions-toolkit/lib/docker/docker';
+import { Buildx } from '@docker/actions-toolkit/lib/buildx/buildx';
 import { exit } from 'node:process';
 
 async function main() {

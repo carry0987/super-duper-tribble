@@ -1,5 +1,5 @@
 import { getInput, type InputOptions } from '@actions/core';
-import { Util } from '@docker/actions-toolkit/lib/util.js';
+import { Util } from '@docker/actions-toolkit/lib/util';
 
 const truthy = new Set(['true', 'True', 'TRUE']);
 const falsy = new Set(['false', 'False', 'FALSE']);
