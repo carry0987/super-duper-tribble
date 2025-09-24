@@ -21,7 +21,7 @@ export default async function runImageTools(
     buildx: Buildx,
     { inputs, tags, push, append, annotations, builder }: Omit<Inputs, 'fallback'>
 ) {
-    // TODO: Determine how we should get images?
+    // TODO: determine how we should get images?
     const images = [] as string[];
     const createArgs = getArguments('create', { inputs, tags, push, append, annotations, builder });
 
