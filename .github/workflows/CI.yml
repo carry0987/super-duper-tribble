@@ -48,11 +48,9 @@ jobs:
       - uses: EndBug/add-and-commit@v9
         with:
           add: 'build'
-          # fetch: true
           # commit: --signoff
           author_name: 'carry0987[bot]'
           author_email: carry0987@users.noreply.github.com
           default_author: user_info
           message: '[skip ci] :sparkles: Update build artifacts'
-          # pull: true
           # push: true
