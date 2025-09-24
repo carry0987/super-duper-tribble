@@ -1,5 +1,5 @@
 {
-    "name": "@carry0987/docker-manifest-action",
+    "name": "@carry0987/super-duper-tribble",
     "description": "A tiny, simple GitHub Action to link Docker manifests easily",
     "version": "1.0.0",
     "main": "build/main.js",

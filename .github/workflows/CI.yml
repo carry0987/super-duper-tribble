@@ -35,7 +35,7 @@ jobs:
     name: Update build artifacts
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     needs: [ci]
     if: ${{ github.event_name != 'pull_request' }}
     steps:
