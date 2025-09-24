@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths-ignore:
-      - '.github/**'
+      # - '.github/**'
       - '.prettierignore'
       - 'pnpm-lock.yaml'
       - '**.md'
@@ -51,7 +51,7 @@ jobs:
           fetch: true
           commit: --signoff
           author_name: 'carry0987[bot]'
-          author_email: ${{ github.actor }}@users.noreply.github.com
+          author_email: carry0987@users.noreply.github.com
           default_author: user_info
           message: '[skip ci] :sparkles: Update build artifacts'
           pull: true
