@@ -1,8 +1,8 @@
-### 🐳 `docker-manifest-test`
+### 🐳 `docker-imagetools-action`
 
 #### *A tiny, simple GitHub Action to link Docker manifests easily*
 
-**docker-manifest-action** is a simple GitHub action that combines a list of Docker manifests and merges them into one image via the [`docker buildx imagetools`] command.
+**docker-imagetools-action** is a simple GitHub action that combines a list of Docker manifests and merges them into one image via the [`docker buildx imagetools`] command.
 
 ## Usage
 
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     name: my ci job
     steps:
-      - uses: carry0987/docker-manifest-test@master
+      - uses: carry0987/docker-imagetools-action@master
         with:
           inputs: namespace/image:latest
           images: namespace/image:latest-amd64,namespace:image/latest-arm64
