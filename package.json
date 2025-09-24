@@ -1,6 +1,6 @@
 {
-    "name": "@carry0987/docker-manifest-action",
-    "description": "A tiny, simple GitHub Action to link Docker manifests easily",
+    "name": "@carry0987/docker-imagetools-action",
+    "description": "A tiny, simple GitHub Action to link Docker manifests with imagetools easily",
     "version": "1.0.0",
     "main": "build/main.js",
     "types": "build/index.d.ts",
@@ -8,12 +8,12 @@
     "private": true,
     "author": "carry0987",
     "license": "MIT",
-    "repository": "https://github.com/carry0987/docker-manifest-action",
-    "bugs": "https://github.com/carry0987/docker-manifest-action/issues/new",
+    "repository": "https://github.com/carry0987/docker-imagetools-action",
+    "bugs": "https://github.com/carry0987/docker-imagetools-action/issues/new",
     "keywords": [
         "docker",
-        "docker-manifest-action",
-        "manifest"
+        "docker-imagetools-action",
+        "imagetools"
     ],
     "scripts": {
         "lint": "prettier --write \"src/**/*.{ts,tsx,scss}\"",
