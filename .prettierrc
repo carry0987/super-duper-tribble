@@ -14,7 +14,7 @@
             }
         },
         {
-            "files": "*.yml",
+            "files": ".github/*.yml",
             "options": {
                 "tabWidth": 2
             }
